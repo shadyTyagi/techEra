@@ -1,0 +1,15 @@
+.course-items {
+  display: flex;
+  flex-direction: row;
+  margin: 55px;
+}
+
+.course-img {
+  width: 65px;
+  height: 65px;
+}
+
+.course-name {
+  font-size: 20px;
+  margin-left: 25px;
+}
