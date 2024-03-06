@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Courses from '../Courses'
+import Header from '../Header'
 import './index.css'
 
 class Home extends Component {
@@ -34,20 +35,23 @@ class Home extends Component {
   render() {
     const {techEraData, isLoading} = this.state
     return (
-      <div className="main-container">
-        {isLoading ? (
-          this.renderLoader()
-        ) : (
-          <>
-            <h1 className="heading">Courses</h1>
-            <ul className="courses-container">
-              {techEraData.map(course => (
-                <Courses coursesList={course} key={course.id} />
-              ))}
-            </ul>
-          </>
-        )}
-      </div>
+      <>
+        <Header />
+        <div className="main-container">
+          {isLoading ? (
+            this.renderLoader()
+          ) : (
+            <>
+              <h1 className="heading">Courses</h1>
+              <ul className="courses-container">
+                {techEraData.map(course => (
+                  <Courses coursesList={course} key={course.id} />
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      </>
     )
   }
 }

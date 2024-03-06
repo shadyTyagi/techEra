@@ -6,10 +6,12 @@ import './App.css'
 
 // Replace your code here
 const App = () => (
-  <Switch>
-    <Route path="/" component={Home} />
-    <Route path="/courses/:id" component={CourseDetail} />
-  </Switch>
+  <div>
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route path="/courses/:id" component={CourseDetail} />
+    </Switch>
+  </div>
 )
 
 export default App
